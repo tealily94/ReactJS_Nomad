@@ -15,15 +15,14 @@
   <script type="text/babel">
     const root = document.getElementById("root");
     function App() {
-      const [counter, setCounter] = React.useState(0);
-      const onClick = () => {
-        // setCounter(counter + 1);
-        setCounter((current) => current + 1);
-      };
+      const [minutes, setMinutes] = React.useState();
       return (
         <div>
-          <h3>Total Clicks: {counter}</h3>
-          <button onClick={onClick}>Click me</button>
+          <h1>Super Converter</h1>
+          <label htmlFor="min">Minutes</label>
+          <input value={minutes} id="min" placeholder="Minutes" type="number" />
+          <label htmlFor="hr">Hours</label>
+          <input id="hr" placeholder="Hours" type="number" />
         </div>
       );
     }
